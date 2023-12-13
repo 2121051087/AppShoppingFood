@@ -27,25 +27,28 @@ class _PersonalScreenState extends State<PersonalScreen> {
         child: Column(
           children: [
             // header
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
+            Padding(
+              padding: const EdgeInsets.only(top: 18.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
 
-              children: [
+                children: [
 
-                 const Icon(
-                    Icons.person,
-                    color: Colors.black45,
-                    size: 64,
+                   const Icon(
+                      Icons.person,
+                      color: Colors.black45,
+                      size: 64,
+                    ),
+
+                  Text(
+                    currentUser.email!,
+                    style: const TextStyle(
+                      color: Colors.amber,
+                      fontSize: 24,
+                    ),
                   ),
-
-                Text(
-                  currentUser.email!,
-                  style: const TextStyle(
-                    color: Colors.amber,
-                    fontSize: 24,
-                  ),
-                ),
-              ],
+                ],
+              ),
             ),
 
 

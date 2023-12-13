@@ -313,6 +313,7 @@ class _DetailScreenState extends State<DetailScreen> {
                   switch (index) {
                     case 0:
                       return Column(
+
                         children: <Widget>[
                           Row(
                             children: <Widget>[
@@ -328,71 +329,73 @@ class _DetailScreenState extends State<DetailScreen> {
                                   ),
                                 ),
                               ),
-                              Column(
-                                children: <Widget>[
-                                  const Text(
-                                    'Multigrain Pizza',
-                                    style: TextStyle(
-                                      color: Color(0xFF3E4462),
-                                      fontSize: 16,
-                                      fontFamily: 'Poppins',
-                                      fontWeight: FontWeight.w500,
-                                      height: 0.08,
-                                      letterSpacing: -0.24,
+                              Container(
+
+                                padding:EdgeInsets.only(left:16),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: <Widget>[
+                                    const Text(
+                                      'Multigrain Pizza',
+                                      style: TextStyle(
+                                        color: Color(0xFF3E4462),
+                                        fontSize: 16,
+                                        fontFamily: 'Poppins',
+                                        fontWeight: FontWeight.w500,
+
+                                      ),
                                     ),
-                                  ),
-                                  const Padding(
-                                    padding: EdgeInsets.only(top: 20.0),
-                                    child: Row(
-                                      children: [
-                                        Text("\$18.50"),
-                                        Text(
-                                          '  22.500',
-                                          style: TextStyle(
-                                            color: Color(0xFFC9C9C9),
-                                            fontSize: 14,
-                                            fontFamily: 'Poppins',
-                                            fontWeight: FontWeight.w400,
-                                            height: 0.10,
-                                            letterSpacing: -0.24,
-                                          ),
-                                        )
-                                      ],
-                                    ),
-                                  ),
-                                  Padding(
-                                    padding: const EdgeInsets.only(top: 8.0),
-                                    child: Row(
-                                      children: <Widget>[
-                                        Container(
-                                          width: 20,
-                                          height: 20,
-                                          decoration: BoxDecoration(
-                                            color: Colors.cyan,
-                                            borderRadius:
-                                            BorderRadius.circular(10),
-                                          ),
-                                          child: const Text(" %"),
+                                    const Padding(
+                                      padding: EdgeInsets.all(8.0),
+                                      child: Row(
+                                          children: [
+                                            Text("\$18.50"),
+                                            Text(
+                                              '  22.500',
+                                              style: TextStyle(
+                                                color: Color(0xFFC9C9C9),
+                                                fontSize: 14,
+                                                fontFamily: 'Poppins',
+                                                fontWeight: FontWeight.w400,
+
+                                              ),
+                                            )
+                                          ],
                                         ),
-                                        const Text(
-                                          'Free delivery ',
-                                          style: TextStyle(
-                                            color: Color(0xFF7E7E7E),
-                                            fontSize: 12,
-                                            fontFamily: 'Poppins',
-                                            fontWeight: FontWeight.w400,
-                                            height: 0.14,
-                                            letterSpacing: -0.24,
-                                          ),
-                                        ),
-                                      ],
                                     ),
-                                  ),
-                                ],
+
+
+                                       Row(
+                                        children: <Widget>[
+                                          Container(
+                                            width: 20,
+                                            height: 20,
+                                            decoration: BoxDecoration(
+                                              color: Colors.cyan,
+                                              borderRadius:
+                                              BorderRadius.circular(10),
+                                            ),
+                                            child: Center(child: const Text("%")),
+                                          ),
+                                          const Text(
+                                            'Free delivery ',
+                                            style: TextStyle(
+                                              color: Color(0xFF7E7E7E),
+                                              fontSize: 12,
+                                              fontFamily: 'Poppins',
+                                              fontWeight: FontWeight.w400,
+
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+
+                                  ],
+                                ),
                               ),
                               Container(
                                 margin:
-                                const EdgeInsets.only(left: 41, bottom: 70),
+                                const EdgeInsets.only(left: 21, bottom: 70),
                                 height: 28,
                                 width: 28,
                                 decoration: BoxDecoration(
@@ -463,8 +466,7 @@ class _DetailScreenState extends State<DetailScreen> {
                                         fontSize: 12,
                                         fontFamily: 'Poppins',
                                         fontWeight: FontWeight.w400,
-                                        height: 0.14,
-                                        letterSpacing: -0.24,
+
                                       ),
                                     ),
                                     const SizedBox(width: 16),
@@ -493,207 +495,209 @@ class _DetailScreenState extends State<DetailScreen> {
                       );
 
                     case 1:
-                      return Column(
-                        children: <Widget>[
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: <Widget>[
-                              Container(
-                                width: 100,
-                                height: 123,
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(8),
-                                  image: DecorationImage(
-                                    image: AssetImage(
-                                      '${item.image}',
+                      return Stack(
+
+                        children:[ Column(
+                          children: <Widget>[
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: <Widget>[
+                                Container(
+                                  width: 100,
+                                  height: 123,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(8),
+                                    image: DecorationImage(
+                                      image: AssetImage(
+                                        '${item.image}',
+                                      ),
                                     ),
                                   ),
                                 ),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.only(
-                                  top: 30.0,
-                                ),
-                                child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.start,
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: <Widget>[
-                                    const Text(
-                                      'Chicken Pizza',
-                                      style: TextStyle(
-                                        color: Color(0xFF3E4462),
-                                        fontSize: 16,
-                                        fontFamily: 'Poppins',
-                                        fontWeight: FontWeight.w500,
-                                        height: 0.08,
-                                        letterSpacing: -0.24,
-                                      ),
-                                    ),
-                                    const Padding(
-                                      padding: EdgeInsets.only(top: 30.0),
-                                      child: Row(
-                                        children: [
-                                          Text(
-                                            '\$20.50',
-                                            style: TextStyle(
-                                              color: Color(0xFF3E4462),
-                                              fontSize: 14,
-                                              fontFamily: 'Poppins',
-                                              fontWeight: FontWeight.w400,
-                                              height: 0.10,
-                                              letterSpacing: -0.24,
-                                            ),
+                                 Container(
+                                   padding:EdgeInsets.only(left: 16),
+
+                                    child: Column(
+                                      mainAxisAlignment: MainAxisAlignment.start,
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: <Widget>[
+                                         const Text(
+                                          'Chicken Pizza',
+                                          style: TextStyle(
+                                            color: Color(0xFF3E4462),
+                                            fontSize: 16,
+                                            fontFamily: 'Poppins',
+                                            fontWeight: FontWeight.w500,
+
                                           ),
-                                          Text(
-                                            '  24.500',
-                                            style: TextStyle(
-                                              color: Color(0xFFC9C9C9),
-                                              fontSize: 14,
-                                              fontFamily: 'Poppins',
-                                              fontWeight: FontWeight.w400,
-                                              height: 0.10,
-                                              letterSpacing: -0.24,
+                                        ),
+
+                                        const Padding(
+                                          padding: EdgeInsets.all(8.0),
+                                          child: Row(
+                                              children: [
+                                                Text(
+                                                  '\$20.50',
+                                                  style: TextStyle(
+                                                    color: Color(0xFF3E4462),
+                                                    fontSize: 14,
+                                                    fontFamily: 'Poppins',
+                                                    fontWeight: FontWeight.w400,
+
+                                                  ),
+                                                ),
+                                                Text(
+                                                  '  24.500',
+                                                  style: TextStyle(
+                                                    color: Color(0xFFC9C9C9),
+                                                    fontSize: 14,
+                                                    fontFamily: 'Poppins',
+                                                    fontWeight: FontWeight.w400,
+
+                                                  ),
+                                                )
+                                              ],
                                             ),
-                                          )
-                                        ],
-                                      ),
+                                        ),
+
+                                        Row(
+                                            mainAxisAlignment: MainAxisAlignment.center,
+                                            crossAxisAlignment: CrossAxisAlignment.center,
+                                            children: <Widget>[
+                                              Container(
+                                                width: 20,
+                                                height: 20,
+                                                decoration: BoxDecoration(
+                                                  color: Colors.cyan,
+                                                  borderRadius:
+                                                  BorderRadius.circular(10),
+                                                ),
+                                                child: Center(child: const Text("%")),
+                                              ),
+                                              const Text(
+                                                'Delivery discount up to 3K',
+                                                style: TextStyle(
+                                                  color: Color(0xFF7E7E7E),
+                                                  fontSize: 12,
+                                                  fontFamily: 'Poppins',
+                                                  fontWeight: FontWeight.w400,
+
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+
+                                      ],
                                     ),
-                                    Padding(
-                                      padding: const EdgeInsets.only(top: 15.0),
-                                      child: Row(
-                                        mainAxisAlignment:
-                                        MainAxisAlignment.center,
-                                        crossAxisAlignment:
-                                        CrossAxisAlignment.center,
-                                        children: <Widget>[
-                                          Container(
-                                            width: 20,
-                                            height: 20,
-                                            decoration: BoxDecoration(
-                                              color: Colors.cyan,
+                                  ),
+
+
+                              ],
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: <Widget>[
+                                Container(
+                                  margin: const EdgeInsets.only(right: 36),
+                                  height: 24,
+                                  width: 24,
+                                  decoration: ShapeDecoration(
+                                    color: Colors.white,
+                                    shape: RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(4)),
+                                  ),
+                                  child: SvgPicture.asset(
+                                      'assets/vectors/ic_vector.svg'),
+                                ),
+                                Container(
+                                  width: 88,
+                                  height: 26,
+                                  clipBehavior: Clip.antiAlias,
+                                  decoration: const BoxDecoration(
+                                      color: Color(0xFFF8F5F2)),
+                                  child: Row(
+                                    mainAxisSize: MainAxisSize.min,
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                    children: [
+                                      Container(
+                                        width: 24,
+                                        height: 24,
+                                        clipBehavior: Clip.antiAlias,
+                                        decoration: ShapeDecoration(
+                                          color: const Color(0xFFE1E1E1),
+                                          shape: RoundedRectangleBorder(
                                               borderRadius:
-                                              BorderRadius.circular(10),
-                                            ),
-                                            child: const Text(" %"),
-                                          ),
-                                          const Text(
-                                            'Delivery discount up to 3K',
-                                            style: TextStyle(
-                                              color: Color(0xFF7E7E7E),
-                                              fontSize: 12,
-                                              fontFamily: 'Poppins',
-                                              fontWeight: FontWeight.w400,
-                                              height: 0.14,
-                                              letterSpacing: -0.24,
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                              Container(
-                                margin: const EdgeInsets.only(left: 0, top: 20),
-                                height: 28,
-                                width: 28,
-                                decoration: BoxDecoration(
-                                  color: Colors.white,
-                                  borderRadius: BorderRadius.circular(14),
-                                  boxShadow: const [
-                                    BoxShadow(
-                                      color: Colors.grey,
-                                      offset: Offset(4, 4),
-                                      blurRadius: 2.0,
-                                      spreadRadius: 0.5,
-                                    ),
-                                  ],
-                                ),
-                                child: SvgPicture.asset(
-                                    'assets/vectors/ic_heart_favorite.svg'),
-                              ),
-                            ],
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.end,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: <Widget>[
-                              Container(
-                                margin: const EdgeInsets.only(right: 36),
-                                height: 24,
-                                width: 24,
-                                decoration: ShapeDecoration(
-                                  color: Colors.white,
-                                  shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(4)),
-                                ),
-                                child: SvgPicture.asset(
-                                    'assets/vectors/ic_vector.svg'),
-                              ),
-                              Container(
-                                width: 88,
-                                height: 26,
-                                clipBehavior: Clip.antiAlias,
-                                decoration: const BoxDecoration(
-                                    color: Color(0xFFF8F5F2)),
-                                child: Row(
-                                  mainAxisSize: MainAxisSize.min,
-                                  mainAxisAlignment: MainAxisAlignment.start,
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: [
-                                    Container(
-                                      width: 24,
-                                      height: 24,
-                                      clipBehavior: Clip.antiAlias,
-                                      decoration: ShapeDecoration(
-                                        color: const Color(0xFFE1E1E1),
-                                        shape: RoundedRectangleBorder(
-                                            borderRadius:
-                                            BorderRadius.circular(4)),
-                                      ),
-                                      child: const Icon(
-                                        Icons.remove,
-                                        color: Colors.white,
-                                        size: 20,
-                                      ),
-                                    ),
-                                    const SizedBox(width: 16),
-                                    const Text(
-                                      '1',
-                                      style: TextStyle(
-                                        color: Color(0xFF3E4462),
-                                        fontSize: 12,
-                                        fontFamily: 'Poppins',
-                                        fontWeight: FontWeight.w400,
-                                        height: 0.14,
-                                        letterSpacing: -0.24,
-                                      ),
-                                    ),
-                                    const SizedBox(width: 16),
-                                    Container(
-                                      width: 24,
-                                      height: 24,
-                                      clipBehavior: Clip.antiAlias,
-                                      decoration: ShapeDecoration(
-                                        color: const Color(0xFF1D2D50),
-                                        shape: RoundedRectangleBorder(
-                                          borderRadius:
-                                          BorderRadius.circular(4),
+                                              BorderRadius.circular(4)),
+                                        ),
+                                        child: const Icon(
+                                          Icons.remove,
+                                          color: Colors.white,
+                                          size: 20,
                                         ),
                                       ),
-                                      child: const Icon(
-                                        Icons.add,
-                                        color: Colors.white,
-                                        size: 20,
+                                      const SizedBox(width: 16),
+                                      const Text(
+                                        '1',
+                                        style: TextStyle(
+                                          color: Color(0xFF3E4462),
+                                          fontSize: 12,
+                                          fontFamily: 'Poppins',
+                                          fontWeight: FontWeight.w400,
+
+                                        ),
                                       ),
-                                    ),
-                                  ],
-                                ),
-                              )
-                            ],
+                                      const SizedBox(width: 16),
+                                      Container(
+                                        width: 24,
+                                        height: 24,
+                                        clipBehavior: Clip.antiAlias,
+                                        decoration: ShapeDecoration(
+                                          color: const Color(0xFF1D2D50),
+                                          shape: RoundedRectangleBorder(
+                                            borderRadius:
+                                            BorderRadius.circular(4),
+                                          ),
+                                        ),
+                                        child: const Icon(
+                                          Icons.add,
+                                          color: Colors.white,
+                                          size: 20,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                )
+                              ],
+                            ),
+                          ],
+                        ),
+                          Positioned(
+                            bottom: 112,
+                            right:10,
+                            child: Container(
+                              margin: const EdgeInsets.only(left: 0,top:10),
+                              height: 28,
+                              width: 28,
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(14),
+                                boxShadow: const [
+                                  BoxShadow(
+                                    color: Colors.grey,
+                                    offset: Offset(4, 4),
+                                    blurRadius: 2.0,
+                                    spreadRadius: 0.5,
+                                  ),
+                                ],
+                              ),
+                              child: SvgPicture.asset(
+                                  'assets/vectors/ic_heart_favorite.svg'),
+                            ),
                           ),
-                        ],
+                  ],
                       );
 
                     default:
