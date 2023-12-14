@@ -49,12 +49,33 @@ class _RegisterPageState extends State<RegisterPage> {
     }
   }
 
-  // Hiển thị thông báo
-  void displayMessage(String message) {
+  // Bẫy lỗi
+  void displayMessage(String code) {
+    String message;
+    switch (code) {
+      case 'invalid-email':
+        message = 'Email không đúng';
+        break;
+      case 'INVALID_LOGIN_CREDENTIALS':
+        message = 'Mật khẩu không đúng';
+        break;
+      case 'weak-pasword':
+        message = 'Mật khẩu cần số và chữ hoặc ký tự đặc biệt';
+        break;
+      default:
+        message = 'Bạn chưa nhập tất cả các thông tin';
+    }
+
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
-        title: Text(message),
+        // title: Text(message),
+        content: Text(
+          message,
+          style: const TextStyle(
+              fontSize: 20,
+              color: Colors.red),
+        ),
       ),
     );
   }

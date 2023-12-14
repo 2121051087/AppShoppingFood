@@ -40,15 +40,34 @@ class _LoginPageState extends State<LoginPage> {
     }
   }
 
-  // Hiển thị thông báo hộp thoại
-  void displayMessage(String message) {
+  // Bẫy lỗi
+  void displayMessage(String code) {
+    String message;
+    switch (code) {
+      case 'invalid-email':
+        message = 'Email không đúng';
+        break;
+      case 'INVALID_LOGIN_CREDENTIALS':
+        message = 'Mật khẩu không đúng';
+        break;
+      default:
+        message = 'Không tìm thấy tài khoản';
+    }
+
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
-        title: Text(message),
+        // title: Text(message),
+        content: Text(
+          message,
+          style: const TextStyle(
+              fontSize: 20,
+              color: Colors.red),
+        ),
       ),
     );
   }
+
 
   @override
   Widget build(BuildContext context) {
@@ -65,7 +84,7 @@ class _LoginPageState extends State<LoginPage> {
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       Text(
-                        "Food Man",
+                        "Shopping Food",
                         style: GoogleFonts.dmSerifDisplay(
                           color: Colors.grey[900],
                           fontSize: 28,
