@@ -2,6 +2,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/auth/auth.dart';
 import 'package:flutter_application_1/firebase_options.dart';
+import 'Insert/Start_Screen.dart';
 import 'pages/cart_page.dart';
 
 
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: const AuthPage(),
+      home: const StartScreen(),
       routes: {
         "/mycart": (context) => const MyCart(),
       },

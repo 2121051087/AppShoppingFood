@@ -95,7 +95,7 @@ class _RegisterPageState extends State<RegisterPage> {
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       Text(
-                        "Food Man",
+                        "Shopping Food",
                         style: GoogleFonts.dmSerifDisplay(
                           color: Colors.grey[900],
                           fontSize: 28,
