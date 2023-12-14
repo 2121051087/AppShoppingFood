@@ -72,90 +72,135 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFFF8F5F2),
-      body: SingleChildScrollView(
-        child: SafeArea(
-          child: Center(
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 16),
-              child: Column(
+      extendBodyBehindAppBar: true,
+
+      appBar: AppBar(
+        elevation: 0,
+        backgroundColor: Colors.transparent,
+
+        title: Text("Shopping Food",
+            style: TextStyle(
+              fontSize: 38,
+              color: Colors.white,
+
+            ),
+        ),
+      ),
+
+
+
+      body: Container(
+          decoration: const BoxDecoration(
+            gradient: RadialGradient(
+              colors: [
+                Colors.black,
+                Colors.deepPurple,
+                Colors.green,
+
+              ],
+              focal: Alignment.centerRight,
+              center:Alignment.centerLeft,
+              radius:2.8,
+            ),
+          ),
+          // image
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+
+              Row(
                 children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      Text(
-                        "Shopping Food",
-                        style: GoogleFonts.dmSerifDisplay(
-                          color: Colors.grey[900],
-                          fontSize: 28,
-                        ),
-                      ),
-                    ],
-                  ),
-      
-                  // image
-                  Padding(
-                    padding: const EdgeInsets.only(top: 50,right: 30,left: 30,bottom: 10),
-                    child: Image.asset(
-                      'assets/images/intro.png',
+
+                  Image.asset(
+                      'assets/images/img_sign_in.png',
                       fit: BoxFit.cover,
                     ),
-                  ),
-      
-                  // Nhập email
-                  MyTextField(
-                      controller: emailTextController,
-                      hintText: 'Email',
-                      obscureText: false),
-      
-                  const SizedBox(height: 10),
-      
-                  // Nhập Mật khẩu
-                  MyTextField(
-                    controller: passwordTextController,
-                    hintText: 'Mật khẩu',
-                    obscureText: true,
-                  ),
-      
-                  const SizedBox(height: 25),
-      
-                  MyButtonLogin(
-                    onTap: signIn,
-                    text: 'Đăng Nhập',
-                  ),
 
-      
-                  const SizedBox(height: 20),
-      
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        "Quên mật khẩu?",
-                        style: TextStyle(
-                          color: Colors.grey[700],
-                          fontSize: 18,
-                        ),
-                      ),
-                      const SizedBox(width: 4),
-                      GestureDetector(
-                        onTap: widget.onTap,
-                        child: const Text(
-                          "Đăng ký",
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            color: Colors.blue,
+                ],
+              ),
+              SizedBox(height:64),
+
+
+                SingleChildScrollView(
+                  child: Center(
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 16),
+
+                            child: Column(
+                              children: [
+
+
+                                // Nhập email
+                                MyTextField(
+                                    controller: emailTextController,
+                                    hintText: 'Email',
+                                    obscureText: false),
+
+                                const SizedBox(height: 16),
+
+                                // Nhập Mật khẩu
+                                MyTextField(
+                                  controller: passwordTextController,
+                                  hintText: 'Mật khẩu',
+                                  obscureText: true,
+                                ),
+
+                                const SizedBox(height: 32),
+
+                                MyButtonLogin(
+                                  onTap: signIn,
+                                  text: 'Đăng Nhập',
+                                ),
+
+
+                                const SizedBox(height: 20),
+
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    const Text(
+                                      "Quên mật khẩu ?",
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 18,
+                                      ),
+                                    ),
+                                    const SizedBox(width: 4),
+                                    GestureDetector(
+                                      onTap: widget.onTap,
+                                      child: const Text(
+                                        "Đăng ký",
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                          color: Colors.blue,
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
+
                           ),
                         ),
                       ),
-                    ],
-                  ),
-                ],
-              ),
-            ),
+
+             
+
+
+
+
+            ],
           ),
+
         ),
-      ),
+
+
+
+
+
+
     );
+
   }
 }

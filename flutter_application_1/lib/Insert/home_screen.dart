@@ -281,17 +281,17 @@ class _HomeScreenState extends State<HomeScreen> {
               padding: const EdgeInsets.only(bottom: 16),
               child: Container(
                 margin: const EdgeInsets.symmetric(horizontal: 16),
-                child: Row(
+                child: const Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    const Text(
+                    Text(
                       "Today's promo",
                       style: TextStyle(
                         fontSize: 28,
                         color: Color(0xFF1D2D50),
                       ),
                     ),
-                    const Text(
+                    Text(
                       "See all",
                       style: TextStyle(
                         fontSize: 16,
