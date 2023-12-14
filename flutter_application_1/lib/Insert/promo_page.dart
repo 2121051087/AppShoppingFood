@@ -48,7 +48,7 @@ class _PromoPageState extends State<PromoPage> {
                             );
                           },
                           child: Padding(
-                            padding: const EdgeInsets.only(left: 16 , top: 20),
+                            padding: const EdgeInsets.only(left: 16 , top: 22),
 
 
                               child: SvgPicture.asset(
@@ -61,7 +61,7 @@ class _PromoPageState extends State<PromoPage> {
 //------------------ button returns to the previous page----------------------------------
                         const SizedBox(width: 33),
                         const Padding(
-                          padding: EdgeInsets.only(top:24),
+                          padding: EdgeInsets.only(top:26),
                           child: Center(
                             child: Text(
                               "Today's Promo",
@@ -97,16 +97,16 @@ class _PromoPageState extends State<PromoPage> {
                               return Container(
                                 margin: EdgeInsets.symmetric(horizontal: 8),
                                 child: Padding(
-                                  padding:  const EdgeInsets.only(left: 16,bottom:10),
+                                  padding:  const EdgeInsets.only(left: 16,bottom:4),
                                   child: Container(
                                     width: 74,
                                     height: 38,
                                     decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(4),
+                                      borderRadius: BorderRadius.circular(6),
                                       color: Colors.white,
                                       boxShadow: const [
                                         BoxShadow(
-                                          color: Colors.black26,
+                                          color: Colors.black12,
 
                                           offset: Offset(4, 4),
                                           blurRadius: 0.3,
@@ -132,16 +132,16 @@ class _PromoPageState extends State<PromoPage> {
 
                             case 1: // Nearby button
                               return Padding(
-                                padding: const EdgeInsets.only(left: 16 ,bottom:10),
+                                padding: const EdgeInsets.only(left: 16 ,bottom:4),
                                 child: Container(
                                   width: 83,
                                   height: 38,
                                   decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(4),
+                                    borderRadius: BorderRadius.circular(6),
                                     color: Color(0xFF1D2D50),
                                     boxShadow: const [
                                       BoxShadow(
-                                        color: Colors.black26,
+                                        color: Colors.black12,
                                         offset: Offset(4, 4),
                                         blurRadius: 0.3,
                                         spreadRadius: 0.2,
@@ -168,16 +168,16 @@ class _PromoPageState extends State<PromoPage> {
 
                             case 2: // Above 4.5 button
                               return Padding(
-                                padding: const EdgeInsets.only(left: 16,bottom:10),
+                                padding: const EdgeInsets.only(left: 16,bottom:4),
                                 child: Container(
                                   width: 97,
                                   height: 38,
                                   decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(4),
+                                    borderRadius: BorderRadius.circular(6),
                                     color: Colors.white,
                                     boxShadow: const [
                                       BoxShadow(
-                                        color: Colors.black26,
+                                        color: Colors.black12,
                                         offset: Offset(4, 4),
                                         blurRadius: 0.3,
                                         spreadRadius: 0.2,
@@ -201,16 +201,16 @@ class _PromoPageState extends State<PromoPage> {
 
                             case 3: // Cheapest button
                               return Padding(
-                                padding: const EdgeInsets.only(left: 16 , right:16,bottom:10),
+                                padding: const EdgeInsets.only(left: 16 , right:16,bottom:4),
                                 child: Container(
                                   width: 98,
                                   height: 38,
                                   decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(4),
+                                    borderRadius: BorderRadius.circular(6),
                                     color: Colors.white,
                                     boxShadow: const [
                                       BoxShadow(
-                                        color: Colors.black26,
+                                        color: Colors.black12,
                                         offset: Offset(4, 4),
                                         blurRadius: 0.3,
                                         spreadRadius: 0.2,
@@ -262,7 +262,7 @@ class _PromoPageState extends State<PromoPage> {
                               Stack(
                                  children: [Container(
                                     padding: EdgeInsets.all(8.0),
-                                    width: 360,
+                                    width: 345,
                                     decoration: BoxDecoration(
                                       color: Colors.white,
                                       borderRadius: BorderRadius.circular(8),
@@ -673,7 +673,7 @@ class _PromoPageState extends State<PromoPage> {
                               Stack(
                                 children: [Container(
                                   padding: EdgeInsets.all(8.0),
-                                  width: 360,
+                                  width: 345,
                                   decoration: BoxDecoration(
                                     color: Colors.white,
                                     borderRadius: BorderRadius.circular(8),

@@ -9,25 +9,17 @@ class StartScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: InkWell(
-        onTap: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) =>    const AuthPage(),
-            ),
-          );
-        },
-
-        child: Container(
-          decoration: BoxDecoration(
+      body: Container(
+          decoration: const BoxDecoration(
             gradient: LinearGradient(
               colors: [
+                Colors.green,
+                Colors.deepPurple,
                 Colors.black,
-                Colors.red,
               ],
-              begin: Alignment.topCenter,
-              end:Alignment.bottomCenter,
+
+              begin: Alignment.topLeft,
+              end:Alignment.bottomRight,
             ),
           ),
 
@@ -53,47 +45,47 @@ class StartScreen extends StatelessWidget {
                     fontWeight: FontWeight.w700,
                   ),
                 ),
-                // const SizedBox(height: 50),
-                // InkWell(
-                //   onTap: () {
-                //     Navigator.push(
-                //       context,
-                //       MaterialPageRoute(
-                //         builder: (context) =>    const AuthPage(),
-                //       ),
-                //     );
-                //   },
-                //
-                //
-                //   child: Container(
-                //     margin: const EdgeInsets.symmetric(
-                //       horizontal: 36,
-                //     ),
-                //     padding: const EdgeInsets.symmetric(
-                //       horizontal: 16,
-                //       vertical: 12,
-                //     ),
-                //     decoration: BoxDecoration(
-                //       borderRadius: BorderRadius.circular(32),
-                //       color: Colors.white,
-                //     ),
-                //     child: const Center(
-                //       child: Text(
-                //         "Start",
-                //         style: TextStyle(
-                //           fontSize: 18,
-                //           color: Color(0xFF1D2D50),
-                //           fontWeight: FontWeight.w600,
-                //         ),
-                //       ),
-                //     ),
-                //   ),
-                // )
+                const SizedBox(height: 20),
+                InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) =>    const AuthPage(),
+                      ),
+                    );
+                  },
+
+
+                  child: Container(
+                    margin: const EdgeInsets.symmetric(
+                      horizontal: 36,
+                    ),
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 16,
+                      vertical: 12,
+                    ),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(32),
+                      color: Colors.white,
+                    ),
+                    child: const Center(
+                      child: Text(
+                        "Get start",
+                        style: TextStyle(
+                          fontSize: 18,
+                          color: Color(0xFF1D2D50),
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                    ),
+                  ),
+                )
               ],
             ),
           ),
         ),
-      ),
+
     );
   }
 }
