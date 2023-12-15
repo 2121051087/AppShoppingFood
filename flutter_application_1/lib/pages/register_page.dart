@@ -63,6 +63,9 @@ class _RegisterPageState extends State<RegisterPage> {
       case 'weak-pasword':
         message = 'Mật khẩu cần số và chữ hoặc ký tự đặc biệt';
         break;
+      case 'email-already-in-use':
+        message = 'Tài khoản đã tồn tại';
+        break;
       default:
         message = 'Bạn chưa nhập tất cả các thông tin';
     }
