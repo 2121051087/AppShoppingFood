@@ -3,6 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/Insert/Four_Screen.dart';
 import 'package:flutter_svg/svg.dart';
 
+import '../components/app_colors.dart';
+import '../components/app_vectors.dart';
+import '../components/quick_filter_button.dart';
 import '../pages/cart_page.dart';
 import 'detail_Page.dart';
 
@@ -95,146 +98,23 @@ class _PromoPageState extends State<PromoPage> {
 
                           switch (index) {
                             case 0: // Filter button
-                              return Container(
-                                margin: EdgeInsets.symmetric(horizontal: 8),
-                                child: Padding(
-                                  padding:  const EdgeInsets.only(left: 16,bottom:4),
-                                  child: Container(
-                                    width: 74,
-                                    height: 38,
-                                    decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(6),
-                                      color: Colors.white,
-                                      boxShadow: const [
-                                        BoxShadow(
-                                          color: Colors.black12,
+                              return QuickFilterButton(text: "Filter ", vector: AppVector.icFilter, );
 
-                                          offset: Offset(4, 4),
-                                          blurRadius: 0.3,
-                                          spreadRadius: 0.2,
-                                        ),
-                                      ],
-                                    ),
-                                    child: Row(
-                                      crossAxisAlignment: CrossAxisAlignment.center,
-                                      mainAxisAlignment: MainAxisAlignment.center,
-                                      children: <Widget>[
-                                        SvgPicture.asset(
-                                          "assets/vectors/ic_filter.svg",
-                                        ),
-                                        const Text(
-                                          " Filter",
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                ),
-                              );
 
                             case 1: // Nearby button
-                              return Padding(
-                                padding: const EdgeInsets.only(left: 16 ,bottom:4),
-                                child: Container(
-                                  width: 83,
-                                  height: 38,
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(6),
-                                    color: Color(0xFF1D2D50),
-                                    boxShadow: const [
-                                      BoxShadow(
-                                        color: Colors.black12,
-                                        offset: Offset(4, 4),
-                                        blurRadius: 0.3,
-                                        spreadRadius: 0.2,
-                                      ),
-                                    ],
-                                  ),
-                                  child: Row(
-                                    crossAxisAlignment: CrossAxisAlignment.center,
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: <Widget>[
-                                      SvgPicture.asset(
-                                        "assets/vectors/ic_current.svg",
-                                      ),
-                                      const Text(
-                                        " Nearby",
-                                        style: TextStyle(
-                                          color: Colors.white,
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              );
+                              return QuickFilterButton(text: "Nearby ", vector: AppVector.icNearby,buttonColor: AppColors.textPrimaryColor,textColor: AppColors.whiteColor,);
+
 
                             case 2: // Above 4.5 button
-                              return Padding(
-                                padding: const EdgeInsets.only(left: 16,bottom:4),
-                                child: Container(
-                                  width: 97,
-                                  height: 38,
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(6),
-                                    color: Colors.white,
-                                    boxShadow: const [
-                                      BoxShadow(
-                                        color: Colors.black12,
-                                        offset: Offset(4, 4),
-                                        blurRadius: 0.3,
-                                        spreadRadius: 0.2,
-                                      ),
-                                    ],
-                                  ),
-                                  child: Row(
-                                    crossAxisAlignment: CrossAxisAlignment.center,
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: <Widget>[
-                                      SvgPicture.asset(
-                                        "assets/vectors/ic_star.svg",
-                                      ),
-                                      const Text(
-                                        " Above 4.5",
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              );
+                              return QuickFilterButton(text: "Above 4.5 ", vector: AppVector.icAbove, );
 
                             case 3: // Cheapest button
-                              return Padding(
-                                padding: const EdgeInsets.only(left: 16 , right:16,bottom:4),
-                                child: Container(
-                                  width: 98,
-                                  height: 38,
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(6),
-                                    color: Colors.white,
-                                    boxShadow: const [
-                                      BoxShadow(
-                                        color: Colors.black12,
-                                        offset: Offset(4, 4),
-                                        blurRadius: 0.3,
-                                        spreadRadius: 0.2,
-                                      ),
-                                    ],
-                                  ),
-                                  child: Row(
-                                    crossAxisAlignment: CrossAxisAlignment.center,
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: <Widget>[
-                                      SvgPicture.asset(
-                                        "assets/vectors/ic_cheapest.svg",
-                                      ),
-                                      const Text(
-                                        " Cheapest",
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              );
+                              return QuickFilterButton(text: "Cheapest ", vector: AppVector.icCheapest, );
+
+
 
                             default:
-                              return SizedBox.shrink(); // Empty widget for any other index
+                              return SizedBox(); // Empty widget for any other index
                           }
                         },
                       ),
