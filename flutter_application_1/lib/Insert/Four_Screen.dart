@@ -18,6 +18,7 @@ class _FourScreenState extends State<FourScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       backgroundColor: const Color(0xFFF8F5F2),
       appBar: AppBar(
         elevation: 0,

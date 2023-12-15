@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import '../components/build_logo.dart';
 import '../components/button_login.dart';
 import '../components/text_field.dart';
 
@@ -83,127 +84,154 @@ class _RegisterPageState extends State<RegisterPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFFF8F5F2),
-      body: SingleChildScrollView(
-        child: SafeArea(
-          child: Center(
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 16),
-              child: Column(
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      Text(
-                        "Shopping Food",
-                        style: GoogleFonts.dmSerifDisplay(
-                          color: Colors.grey[900],
-                          fontSize: 28,
-                        ),
-                      ),
-                    ],
-                  ),
-      
-                  Padding(
-                    padding: const EdgeInsets.only(right: 90,left: 90,bottom: 20),
-                    child: Image.asset(
-                      'assets/images/intro.png',
-                      fit: BoxFit.cover,
-                    ),
-                  ),
+        resizeToAvoidBottomInset: false,
 
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      Text(
-                        "Đăng Ký",
-                        style: GoogleFonts.dmSerifDisplay(
-                          color: Colors.grey[900],
-                          fontSize: 24,
-                        ),
-                      ),
-                    ],
-                  ),
-      
-                  const SizedBox(height: 10),
-      
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      Text(
-                        "Nhanh chóng và dễ dàng.",
-                        style: TextStyle(
-                          color: Colors.grey[700],
-                          fontSize: 18,
-                        ),
-                      ),
-                    ],
-                  ),
-      
-                  const SizedBox(height: 25),
-      
-                  // Nhập email
-                  MyTextField(
-                      controller: emailTextController,
-                      hintText: 'Email',
-                      obscureText: false),
-      
-                  const SizedBox(height: 10),
-      
-                  // Nhập mật khẩu
-                  MyTextField(
-                    controller: passwordTextController,
-                    hintText: 'Mật khẩu',
-                    obscureText: true,
-                  ),
-      
-                  const SizedBox(height: 10),
-      
-                  // Xác nhận mật khẩu
-                  MyTextField(
-                    controller: confirmPasswordTextController,
-                    hintText: 'Nhập lại Mật khẩu',
-                    obscureText: true,
-                  ),
-      
-                  const SizedBox(height: 25),
-      
-                  MyButtonLogin(
-                    onTap: signUp,
-                    text: 'Đăng ký',
-                  ),
-      
-                  const SizedBox(height: 20),
-      
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        "Bạn đã có tài khoản?",
-                        style: TextStyle(
-                          color: Colors.grey[700],
-                          fontSize: 18,
-                        ),
-                      ),
-                      const SizedBox(width: 4),
-                      GestureDetector(
-                        onTap: widget.onTap,
-                        child: const Text(
-                          "Đăng nhập",
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            color: Colors.blue,
-                          ),
-                        ),
-                      ),
-                    ],
-                  )
-                ],
-              ),
-            ),
-          ),
-        ),
-      ),
-    );
+         body: Container(
+
+           decoration: const BoxDecoration(
+             gradient: RadialGradient(
+               colors: [
+                 Colors.black,
+                 Colors.deepPurple,
+                 Colors.green,
+
+               ],
+               focal: Alignment.centerRight,
+               center:Alignment.centerLeft,
+               radius:2.8,
+             ),
+           ),
+
+
+               child: ListView(
+                 children:[ Column(
+                   mainAxisAlignment: MainAxisAlignment.center,
+                   children: [
+                     Center(
+                              child: Padding(
+                                padding: const EdgeInsets.symmetric(horizontal: 16),
+                                child: Column(
+                                  children: [
+                                    Row(
+                                      mainAxisAlignment: MainAxisAlignment.start,
+                                      children: [
+                                        SizedBox(height:64),
+                                        Text(
+                                          "Shopping Food",
+                                          style: GoogleFonts.dmSerifDisplay(
+                                            color: Colors.white,
+                                            fontSize: 28,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+
+                                    BuildLogo(
+                                        imageUrl:'assets/images/img_register.png'
+
+                                    ),
+
+                                    Row(
+                                      mainAxisAlignment: MainAxisAlignment.start,
+                                      children: [
+                                        Text(
+                                          "Đăng Ký",
+                                          style: GoogleFonts.dmSerifDisplay(
+                                            color: Colors.white,
+                                            fontSize: 24,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+
+                                    const SizedBox(height: 10),
+
+                                    const Row(
+                                      mainAxisAlignment: MainAxisAlignment.start,
+                                      children: [
+                                        Text(
+                                          "Nhanh chóng và dễ dàng.",
+                                          style: TextStyle(
+                                            color: Colors.grey,
+                                            fontSize: 18,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+
+                                    const SizedBox(height: 25),
+
+                                    // Nhập email
+                                    MyTextField(
+                                        controller: emailTextController,
+                                        hintText: 'Email',
+                                        obscureText: false),
+
+                                    const SizedBox(height: 10),
+
+                                    // Nhập mật khẩu
+                                    MyTextField(
+                                      controller: passwordTextController,
+                                      hintText: 'Mật khẩu',
+                                      obscureText: true,
+                                    ),
+
+                                    const SizedBox(height: 10),
+
+                                    // Xác nhận mật khẩu
+                                    MyTextField(
+                                      controller: confirmPasswordTextController,
+                                      hintText: 'Nhập lại Mật khẩu',
+                                      obscureText: true,
+                                    ),
+
+                                    const SizedBox(height: 25),
+
+                                    MyButtonLogin(
+                                      onTap: signUp,
+                                      text: 'Đăng ký',
+                                    ),
+
+                                    const SizedBox(height: 20),
+
+                                    Row(
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      children: [
+                                        const Text(
+                                          "Bạn đã có tài khoản?",
+                                          style: TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 18,
+                                          ),
+                                        ),
+                                        const SizedBox(width: 4),
+                                        GestureDetector(
+                                          onTap: widget.onTap,
+                                          child: const Text(
+                                            "Đăng nhập",
+                                            style: TextStyle(
+                                              fontWeight: FontWeight.bold,
+                                              fontSize:18,
+                                              color: Colors.blue,
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    )
+                                  ],
+                                ),
+                              ),
+                            ),
+                   ],
+                 ),
+           ],
+               ),
+
+         ),
+
+
+        // ),
+      );
+
   }
 }

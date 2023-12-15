@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/components/build_logo.dart';
 import 'package:flutter_application_1/components/button_login.dart';
 import 'package:flutter_application_1/components/text_field.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -71,7 +72,10 @@ class _LoginPageState extends State<LoginPage> {
 
   @override
   Widget build(BuildContext context) {
+    final isKeyBroad = MediaQuery.of(context).viewInsets.bottom != 0;
+
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       extendBodyBehindAppBar: true,
 
       appBar: AppBar(
@@ -104,25 +108,18 @@ class _LoginPageState extends State<LoginPage> {
             ),
           ),
           // image
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+          child: ListView(
+
             children: [
+              SizedBox(height: 80),
 
-              Row(
-                children: [
+              if(!isKeyBroad) BuildLogo(
+                  imageUrl:'assets/images/img_sign_in.png'
 
-                  Image.asset(
-                      'assets/images/img_sign_in.png',
-                      fit: BoxFit.cover,
-                    ),
-
-                ],
               ),
               SizedBox(height:64),
 
-
-                SingleChildScrollView(
-                  child: Center(
+                 Center(
                         child: Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 16),
 
@@ -172,6 +169,7 @@ class _LoginPageState extends State<LoginPage> {
                                         "Đăng ký",
                                         style: TextStyle(
                                           fontWeight: FontWeight.bold,
+                                          fontSize:18,
                                           color: Colors.blue,
                                         ),
                                       ),
@@ -183,9 +181,9 @@ class _LoginPageState extends State<LoginPage> {
 
                           ),
                         ),
-                      ),
 
-             
+
+
 
 
 
