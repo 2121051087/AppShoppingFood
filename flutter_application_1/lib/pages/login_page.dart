@@ -82,7 +82,7 @@ class _LoginPageState extends State<LoginPage> {
         elevation: 0,
         backgroundColor: Colors.transparent,
 
-        title: Text("Shopping Food",
+        title: const Text("Shopping Food",
             style: TextStyle(
               fontSize: 38,
               color: Colors.white,

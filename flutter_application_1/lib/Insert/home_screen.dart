@@ -341,6 +341,22 @@ class _HomeScreenState extends State<HomeScreen> {
                           ),
                         ),
                         Positioned(
+                          top: 16,
+                          right:16,
+
+                          child: Container(
+                            height:32,
+                            width:35,
+                            decoration: BoxDecoration(
+                              color:Colors.white,
+                              borderRadius: BorderRadius.circular(14),
+
+                            ),
+                            child: SvgPicture.asset('assets/vectors/ic_heart_favorite.svg'),
+
+                          ),
+                        ),
+                        Positioned(
                           bottom: 8,
                           left: 16,
                           right: 16,
