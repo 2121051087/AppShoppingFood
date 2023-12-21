@@ -5,7 +5,7 @@ import 'package:flutter_svg/svg.dart';
 
 import '../../components/app_colors.dart';
 import '../../components/app_vectors.dart';
-import '../../components/quick_filter_button.dart';
+import 'quick_filter_button.dart';
 
 import '../Four_Screen/Four_Screen.dart';
 
@@ -26,12 +26,12 @@ class PromoPage extends StatefulWidget {
 
 class _PromoPageState extends State<PromoPage> {
 
-
-
-
-
   @override
   bool showBottomNavigationBar = false;
+
+
+
+
   void _onAddButtonPressed() {
     // Xử lý sự kiện khi nút Add được nhấn
 
@@ -106,7 +106,6 @@ class _PromoPageState extends State<PromoPage> {
                           switch (index) {
                             case 0: // Filter button
                               return const QuickFilterButton(text: "Filter ", vector: AppVector.icFilter, );
-
                             case 1: // Nearby button
                               return const QuickFilterButton(text: "Nearby ", vector: AppVector.icNearby,buttonColor: AppColors.textPrimaryColor,textColor: AppColors.whiteColor,);
                             case 2: // Above 4.5 button
@@ -276,7 +275,7 @@ class _PromoPageState extends State<PromoPage> {
                     "Checkout",
                     style: TextStyle(
                       color: Colors.white,
-                      fontSize: 16,
+                      fontSize: 20,
                     ),
                   ),
                   SizedBox(width: 70),

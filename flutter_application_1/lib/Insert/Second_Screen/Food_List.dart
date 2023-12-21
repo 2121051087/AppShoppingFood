@@ -4,6 +4,7 @@ import 'package:flutter_svg/svg.dart';
 
 import '../../components/app_colors.dart';
 import '../../components/app_vectors.dart';
+import '../Third_Screen/detail_page.dart';
 import 'Edit_button.dart';
 
 class FoodList extends StatelessWidget {
@@ -33,14 +34,26 @@ class FoodList extends StatelessWidget {
                     Stack(
                         children:[ Row(
                           children: [
-                            Container(
-                              width: 100,
-                              height: 123,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(8),
-                                image: DecorationImage(
-                                  image: AssetImage(
-                                    '${item.image}',
+                            InkWell(
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) =>    const DetailScreen(),
+                                  ),
+                                );
+                              },
+
+
+                              child: Container(
+                                width: 100,
+                                height: 123,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(8),
+                                  image: DecorationImage(
+                                    image: AssetImage(
+                                      '${item.image}',
+                                    ),
                                   ),
                                 ),
                               ),
