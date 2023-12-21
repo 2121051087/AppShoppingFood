@@ -1,10 +1,11 @@
 
-import 'package:flutter_application_1/Insert/Four_Screen.dart';
+
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../pages/cart_page.dart';
+import '../../pages/Five_Screen/cart_page.dart';
+import '../Four_Screen/Four_Screen.dart';
 
 class DetailScreen extends StatefulWidget {
   const DetailScreen({Key? key}) : super(key: key);

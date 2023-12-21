@@ -17,7 +17,6 @@ class StartScreen extends StatelessWidget {
                 Colors.deepPurple,
                 Colors.black,
               ],
-
               begin: Alignment.topLeft,
               end:Alignment.bottomRight,
             ),

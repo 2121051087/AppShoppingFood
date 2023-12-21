@@ -7,7 +7,7 @@ class AppVector {
   static const icFilter ="$baseVector/ic_filter.svg";
   static const icHeart = "$baseVector/ic_heart_favorite.svg";
   static const icHome = "$baseVector/ic_home.svg";
-  static const icLeft = "$baseVector/ic_Left.svg";
+  static const icComeBack = "$baseVector/ic_Left.svg";
   static const icSearch = "$baseVector/ic_search.svg";
   static const icShopping = "$baseVector/ic_shopping.svg";
   static const icAbove = "$baseVector/ic_star.svg";

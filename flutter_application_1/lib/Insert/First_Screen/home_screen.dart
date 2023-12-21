@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/Insert/promo_page.dart';
+import 'package:flutter_application_1/Insert/Second_Screen/promo_page.dart';
 import 'package:flutter_application_1/components/drawer.dart';
 import 'package:flutter_svg/svg.dart';
 

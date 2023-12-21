@@ -3,7 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-import '../pages/cart_page.dart';
+import '../../pages/Five_Screen/cart_page.dart';
 
 class FourScreen extends StatefulWidget {
   const FourScreen({super.key});
@@ -448,10 +448,10 @@ class _FourScreenState extends State<FourScreen> {
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(8),
               ),
-              child: Column(
+              child: const Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  const Text(
+                  Text(
                     "Payment",
                     style: TextStyle(
                       color: Color(0xFF3E4462),
@@ -459,10 +459,10 @@ class _FourScreenState extends State<FourScreen> {
                       fontWeight: FontWeight.w500,
                     ),
                   ),
-                  const SizedBox(height: 24),
+                  SizedBox(height: 24),
                   Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: const <Widget>[
+                    children: <Widget>[
                       Expanded(
                         child: Text(
                           "Item total",
@@ -483,10 +483,10 @@ class _FourScreenState extends State<FourScreen> {
                       ),
                     ],
                   ),
-                  const SizedBox(height: 16),
+                  SizedBox(height: 16),
                   Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: const <Widget>[
+                    children: <Widget>[
                       Expanded(
                         child: Text(
                           "Delivery fee",
@@ -507,10 +507,10 @@ class _FourScreenState extends State<FourScreen> {
                       ),
                     ],
                   ),
-                  const Divider(height: 24),
+                  Divider(height: 24),
                   Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: const <Widget>[
+                    children: <Widget>[
                       Expanded(
                         child: Text(
                           "To Pay",
