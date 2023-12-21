@@ -117,7 +117,7 @@ class FoodList extends StatelessWidget {
                           ],
                         ),
                           Positioned(
-                            top: 4,
+                            top: 8,
                             right:0,
                             child:Container(
                               height:28,

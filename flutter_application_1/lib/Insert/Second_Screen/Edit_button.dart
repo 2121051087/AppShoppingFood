@@ -41,67 +41,70 @@ class _EditButtonState extends State<EditButton> {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.end,
-      children: [
-        SvgPicture.asset(
-          AppVector.icEdit,
-        ),
-        SizedBox(width: 60),
-        Container(
-          child: Row(
-            children: [
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 8.0),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.end,
+        children: [
+          SvgPicture.asset(
+            AppVector.icEdit,
+          ),
+          SizedBox(width: 60),
+          Container(
+            child: Row(
+              children: [
+
+                  Container(
+                    width:36,
+                    height:36,
+                    child: FloatingActionButton(
+                      heroTag: null,
+                      onPressed: _decrementCounter,
+                      tooltip: 'Giảm',
+                      child: const Icon(Icons.remove),
+                      backgroundColor: AppColors.backgroundGrayColor,
+                      shape: ShapeBorder.lerp(
+                        RoundedRectangleBorder(borderRadius: BorderRadius.circular(4)),
+                        CircleBorder(),
+                        0,
+                      ),
+
+                    ),
+                  ),
 
                 Container(
                   width:36,
                   height:36,
+                  color: Color(0xFFF8F5F2),
+                  child: Center(
+                    child: Text(
+                      '$_counter',
+                      style: TextStyle(fontSize: 24),
+                    ),
+                  ),
+                ),
+                Container(
+                  width:36,
+                  height:36,
                   child: FloatingActionButton(
-                    heroTag: null,
-                    onPressed: _decrementCounter,
-                    tooltip: 'Giảm',
-                    child: const Icon(Icons.remove),
-                    backgroundColor: AppColors.backgroundGrayColor,
-                    shape: ShapeBorder.lerp(
+                      heroTag: null,
+                      onPressed: _incrementCounter,
+                      tooltip: 'Tăng',
+                      child: const Icon(Icons.add),
+                      backgroundColor: AppColors.textPrimaryColor,
+                      shape: ShapeBorder.lerp(
                       RoundedRectangleBorder(borderRadius: BorderRadius.circular(4)),
                       CircleBorder(),
                       0,
                     ),
-
-                  ),
+                    ),
                 ),
 
-              Container(
-                width:36,
-                height:36,
-                color: Color(0xFFF8F5F2),
-                child: Center(
-                  child: Text(
-                    '$_counter',
-                    style: TextStyle(fontSize: 24),
-                  ),
-                ),
-              ),
-              Container(
-                width:36,
-                height:36,
-                child: FloatingActionButton(
-                    heroTag: null,
-                    onPressed: _incrementCounter,
-                    tooltip: 'Tăng',
-                    child: const Icon(Icons.add),
-                    backgroundColor: AppColors.textPrimaryColor,
-                    shape: ShapeBorder.lerp(
-                    RoundedRectangleBorder(borderRadius: BorderRadius.circular(4)),
-                    CircleBorder(),
-                    0,
-                  ),
-                  ),
-              ),
-
-            ],
+              ],
+            ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }

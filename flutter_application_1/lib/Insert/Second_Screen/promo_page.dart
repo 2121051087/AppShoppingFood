@@ -183,11 +183,19 @@ class _PromoPageState extends State<PromoPage> {
                                 Text(items.distance!)
                               ],
                             ),
+                            Padding(
+                              padding: const EdgeInsets.symmetric(vertical: 16.0),
+                              child: Container(
+                                width:310,
+                                height:4,
+                                color:AppColors.backgroundGrayColor,
+                              ),
+                            ),
                             FoodList(),
 
 
                             Container(
-                              margin:EdgeInsets.only(right: 8),
+                              margin:EdgeInsets.only(right: 4),
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.end,
                                 children: [
