@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-import '../../components/app_colors.dart';
 
-
+import 'app_colors.dart';
 
 class QuickFilterButton extends StatelessWidget {
   final String text;
